@@ -16,31 +16,56 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .counter {
     color: #ffffff;
-    padding: 2.5rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    width: 100%;
+    text-align: center;
 }
 
 .counter h1 {
-    font-size: 30rem;
+    font-size: 15rem;
     margin: 0;
     line-height: 1;
+    word-break: break-all;
+}
+
+@media (max-width: 768px) {
+    .counter h1 {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter h1 {
+        font-size: 6rem;
+    }
+    #start-voice-recognition {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+    #speech-status {
+        font-size: 0.9rem;
+    }
 }
 
 .control-section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
+    width: 100%;
 }
 
 #start-voice-recognition {
@@ -52,6 +77,8 @@ body {
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 80%;
+    max-width: 300px;
 }
 
 #start-voice-recognition:hover {
@@ -67,4 +94,6 @@ body {
     color: #cbd5e0;
     font-size: 1rem;
     text-align: center;
+    padding: 0 0.5rem;
+    word-break: break-word;
 }
